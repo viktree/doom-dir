@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name : \begin{align*} ... \end{align*}
+# group: environments
+# key: meq
+# --
+
+\begin{align*}
+  $1 &= $2
+\end{align*}
+
+$0

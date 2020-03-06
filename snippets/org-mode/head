@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: org-file header
+# key: head
+# uuid: head
+# --
+#+TITLE:     ${1:Untitled Document}
+#+AUTHOR:    Vikram Venkatarmanan
+#+EMAIL:     vikram.venkatramanan@mail.utoronto.ca

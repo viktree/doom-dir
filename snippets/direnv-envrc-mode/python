@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: python
+# uuid: python-penv-pipenv
+# key: py
+# condition: t        
+# --
+
+
+PYTHON_VERSION="${1:3.8.0}"
+use pyenv \$PYTHON_VERSION
+export PIPENV_VERBOSITY=-1
+
+if [ ! -f "Pipfile.lock" ]
+then
+    pipenv install
+fi
