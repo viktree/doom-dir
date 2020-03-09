@@ -12,9 +12,18 @@
 (doom/set-frame-opacity 95)
 
 (setq doom-theme 'doom-opera
+
       ;; Preferred Fonts
       doom-font (font-spec :family "JetBrains Mono" :size 12)
-      doom-big-font (font-spec :family "JetBrains Mono" :size 30))
+      doom-big-font (font-spec :family "JetBrains Mono" :size 30)
+
+      ;; Modeline
+      doom-modeline-icon (display-graphic-p)
+      doom-modeline-major-mode-icon t
+
+      ;; Hide encoding, but show indent info
+      doom-modeline-buffer-encoding nil
+      doom-modeline-indent-info t)
 
 (custom-set-faces! '(font-lock-comment-face :family "Fantasque Sans Mono" :slant italic))
 
