@@ -27,6 +27,7 @@
 (add-hook 'dired-after-readin-hook 'hl-line-mode)
 (remove-hook 'dired-after-readin-hook 'hl-line-mode)
 
+(add-hook! (dired-mode) 'dired-hide-details-mode)
 (global-git-gutter-mode)
 
 ;; ---------------------------------------------------------------------------------------------------------------------
