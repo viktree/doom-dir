@@ -2,6 +2,9 @@
 
 ;; Place your private configuration here
 
+(setq user-full-name "Vikram Venkataramanan"
+      user-mail-address "vikram.venkataramanan@mail.utoronto.ca")
+
 ;; ---------------------------------------------------------------------------------------------------------------------
 ;; Appearence
 ;; ---------------------------------------------------------------------------------------------------------------------
