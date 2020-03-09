@@ -37,6 +37,8 @@
 (package! polymode)
 (package! prettier-js)
 (package! request)
+(package! srefactor)
+(package! srefactor-lisp)
 (package! tramp)
 (package! vimish-fold)
 (package! vimrc-mode)
