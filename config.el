@@ -41,6 +41,9 @@
 
 (add-hook! (dired-mode) 'dired-hide-details-mode)
 (global-git-gutter-mode)
+(whitespace-mode nil)
+
+(add-hook 'markdown-mode-hook #'doom-disable-line-numbers-h)
 
 ;; ---------------------------------------------------------------------------------------------------------------------
 ;; Pretty Symbols
@@ -68,6 +71,7 @@
 ;; ---------------------------------------------------------------------------------------------------------------------
 ;; Custom functions
 ;; ---------------------------------------------------------------------------------------------------------------------
+
 (defun arrayify (start end quote)
   "Turn strings on newlines into a QUOTEd, comma-separated one-liner."
   (interactive "r\nMQuote: ")
@@ -111,7 +115,7 @@
   (interactive)
   (magit-status  "/yadm::"))
 
-;; ---------------------------------------------------------------------------------------------------------------------
+;;---------------------------------------------------------------------------------------------------------------------
 ;; Local Leader
 ;; ---------------------------------------------------------------------------------------------------------------------
 
@@ -187,10 +191,12 @@
 ;; Packages
 ;; ---------------------------------------------------------------------------------------------------------------------
 
-(use-package! aggressive-indent
-  :config
-  (global-aggressive-indent-mode 1)
-  (add-to-list 'aggressive-indent-excluded-modes 'shell-mode))
+;; (use-package! aggressive-indent
+;;   :config
+;;   (global-aggressive-indent-mode 1)
+;;   (add-to-list 'aggressive-indent-excluded-modes 'shell-mode)
+;;   (add-to-list 'aggressive-indent-excluded-modes 'c-mode)
+;;   )
 
 (use-package! all-the-icons-ivy
   :config
@@ -218,7 +224,7 @@
   :bind
   (("s-d" . counsel-dash-at-point))
   :config
-  (setq counsel-dash-docsets-path "~/.local/share/docsets"
+  (setq counsel-dash-docsets-path "/Volumes/vikram/docsets"
         counsel-dash-common-docsets '("Bash"))
   ;; TODO: Should probably clear this up later
   (add-hook! (emacs-lisp) (setq-local counsel-dash-docsets '("Emacs Lisp")))
